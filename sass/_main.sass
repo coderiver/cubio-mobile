@@ -1,26 +1,219 @@
-// Normally mainpage styles
+.out
+	max-width: 600px
+	min-width: 320px
+	margin: 0 auto 
+	
+//home
+.home
+	background: #353458 
+	text-align: center
+	padding: 190px 7px 115px 
+.logo
+	display: inline-block
+	margin-bottom: 50px
+.btns
+	font-size: 0
+	.btn
+		margin: 0 7px 10px
+
+//form
+.form
+	&__head
+		background: #353458
+		text-align: center
+		position: relative
+		padding: 18px 20px 
+		span
+			font-size: 12px
+			line-height: 1.2
+			color: #fff
+			+ttu
+			+anmed 
+			letter-spacing: 0.2em
+		.btn-blue
+			position: absolute
+			top: 50%
+			right: 14px
+			margin-top: -14px
+	&__close
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -7px
+		+svg(close, 14, 14)
+	&__body
+		position: relative
+		min-height: 200px
+		padding: 30px 0 0  
+	&__field
+		padding: 0 15px 15px
+		+clr
+		.form-input
+			margin-bottom: 17px
+		.link
+			float: right
+			margin: 0 12px 12px
+		.select
+			margin-bottom: 17px
+		&_center
+			text-align: center
 
 
+//inner
+.inner
+	background: #353458
+.header
+	padding: 10px 17px 10px 16px
+	+clr
+	.btn-menu
+		float: left
+		margin: 5px 0 
+	&__address
+		float: right
+		+svg(address, 22, 22)
+.btn-menu
+	display: block
+	width: 18px
+	border-top: 2px solid #fff
+	border-bottom: 2px solid #fff
+	height: 8px
+	position: relative
+	&:before
+		content: "" 
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		height: 2px 
+		background: #fff
+		margin-top: -1px 
+
+.small-text
+	+anreg
+	font-size: 10px
+	line-height: 1.2
+	letter-spacing: 0.2em 
+	display: block
+	text-align: center
+	+ttu
+.wallet
+	padding: 10px 0 0 0 
+	.small-text
+		color: #fff 
+		margin-bottom: 20px
+	&__text
+		text-align: center
+		h2, p
+			display: inline-block
+			+anmed
+			line-height: 1.2
+			color: #fff
+			+ttu
+			&.is-yellow
+				color: #F7CE5E
+				+andemi 
+		h2
+			font-size: 34px
+		p
+			font-size: 22px
+	.money
+		+anreg
+		font-size: 17px
+		line-height: 1.2
+		color: #fff
+		+opacity(0.5) 
+		text-align: center
+		margin-bottom: 20px
+		i
+			font-style: normal
+	&__icon
+		color: #00BEBB
+		width: 50px
+		height: 50px
+		border: 2px solid #00BEBB
+		+border-radius(50%)
+		text-align: center 
+		background: rgba(255, 255, 255, 0.05) 
+		display: block
+		margin: 0 auto 35px
+		+vertical
+		i
+			display: inline-block
+			font-size: 24px
+			line-height: 1
+			padding: 4px 0 0  
+			vertical-align: middle
+
+.course
+	background: #F8FBFC
+	padding: 25px 0 55px
+	.small-text
+		color: #353458
+	&__row
+		max-width: 75%
+		margin: 0 auto
+		padding-bottom: 20px
+		+clr
+	&__currency
+		color: #353458
+		font-size: 18px
+		line-height: 1.2
+		float: left
+		width: 50%
+		span
+			+opacity(0.5)
+			+anreg
+			+ttu
+		i
+			font-style: normal 
+			+andemi
+			display: inline-block
+			width: 20px
+			text-align: left 
+	&__am
+		float: right
+		width: 50%
+		text-align: right
+		+andemi
+		font-size: 18px
+		line-height: 1.2
+		color: #353458 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer
+	ul
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			width: 25%
+			text-align: center
+			padding: 5px 0 
+			a
+				font-size: 9px
+				line-height: 1.2
+				color: #fff
+				+opacity(0.4) 
+				+ttu
+				display: inline-block
+				&.is-active
+					+opacity(1)
+	&__icon
+		height: 30px
+		text-align: center
+		i
+			display: inline-block
+			vertical-align: top
+			&.is-wallet
+				+svg(icon-wallet, 28, 26)
+			&.is-activity
+				+svg(icon-activity, 28, 28)
+			&.is-buy
+				+svg(icon-buy, 28, 28)
+			&.is-sell
+				+svg(icon-sell, 28, 26)
+			
 
 
 

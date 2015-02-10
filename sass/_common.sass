@@ -54,33 +54,144 @@ body
 	line-height: 1.4
 
 
-// common blocks      
+// fonts
+
++font("ProximaNova Semibold", proxima_nova-semibold)
++font("AvenirNext Medium", AvenirNext-Medium)
++font("AvenirNext Regular", AvenirNext-Regular)
++font("AvenirNext DemiBold", AvenirNext-DemiBold)
++font("untitled-font", untitled-font-2)
+
+
+
+// vars
+
+=semi
+	font-family: "ProximaNova Semibold", Arial, sans-serif 
+=anmed
+	font-family: "AvenirNext Medium", Arial, sans-serif 
+=anreg
+	font-family: "AvenirNext Regular", Arial, sans-serif 
+=andemi
+	font-family: "AvenirNext DemiBold", Arial, sans-serif
+=icon
+	font-family: "untitled-font", Arial, sans-serif
+
+=ttu
+	text-transform: uppercase
+//settings
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+a
+	text-decoration: none
+//mod
+.btn
+	+semi
+	font-size: 12px
+	+ttu
+	line-height: 1.2
+	color: #F7CE5E
+	border: 2px solid #F7CE5E 
+	padding: 17px 20px 15px 
+	width: 135px
+	+box
+	display: inline-block
+	+border-radius(2.6px)
+	background: rgba(255, 255, 255, 0.05) 
+	position: relative
+	letter-spacing: 0.2em
+	&:active
+		top: 1px
+
+.form-input
+	width: 100%
+	padding: 7px 0 
+	+box
+	border-bottom: 1px solid #EAEAEA
+	color: #353458  
+	// color: rgba(53, 52, 88, 0.3) 
+	+anreg
+	font-size: 16px
+	letter-spacing: -0.059em 
+	+placeholder-color(rgba(53, 52, 88, 0.3))
+	&_center
+		text-align: center
+
+.btn-submit
+	width: 100%
+	padding: 18px 15px
+	+box
+	+anreg
+	font-size: 12px
+	line-height: 1.2
+	letter-spacing: 0.2em 
+	color: #fff
+	background: #00BEBB
+	+ttu  
+
+.btn-blue	
+	+anmed
+	font-size: 12px
+	line-height: 1.2
+	color: #00BEBB 
+	border: 2px solid #00BEBB
+	+border-radius(4.42px)
+	padding: 5px 8px
+	display: inline-block 
+
+.select
+	position: relative
+	cursor: pointer
+	vertical-align: top
+	text-align: left
+	color: rgba(53, 52, 88, 0.3) 
+	+anreg
+	font-size: 16px
+	letter-spacing: -0.059em 
+.select__text
+	position: relative
+	display: block
+	width: 100%
+	padding: 7px 0 
+	+box
+	border-bottom: 1px solid #EAEAEA
+	&.is-active
+		color: #353458  
+		&:before
+			+opacity(1) 
+	&:before
+		position: absolute
+		top: 3px
+		right: 8px
+		+svg(select-arr, 8, 13)
+		content: "" 
+		+opacity(0.5)
+.select__list
+	position: absolute
+	display: none
+	top: 100%
+	left: 0
+	right: 0
+	z-index: 100
+	border-left: 1px solid #EAEAEA
+	border-right: 1px solid #EAEAEA
+	li
+		cursor: pointer
+		border-bottom: 1px solid #EAEAEA
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.link
+	+anmed
+	font-size: 12px
+	line-height: 1.2
+	color: #00BEBB 
+.text-blue
+	+anmed
+	font-size: 12px
+	line-height: 1.2
+	color: #00BEBB 
 
 
 
