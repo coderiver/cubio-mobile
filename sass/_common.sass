@@ -51,15 +51,17 @@
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
-	line-height: 1.4
+	line-height: 1.2
 
 
 // fonts
 
 +font("ProximaNova Semibold", proxima_nova-semibold)
++font("ProximaNova Regular", ProximaNova-Regular)
 +font("AvenirNext Medium", AvenirNext-Medium)
 +font("AvenirNext Regular", AvenirNext-Regular)
 +font("AvenirNext DemiBold", AvenirNext-DemiBold)
++font("AvenirNext Bold", AvenirNext-Bold)
 +font("untitled-font", untitled-font-2)
 
 
@@ -68,12 +70,16 @@ body
 
 =semi
 	font-family: "ProximaNova Semibold", Arial, sans-serif 
+=reg
+	font-family: "ProximaNova Regular", Arial, sans-serif
 =anmed
 	font-family: "AvenirNext Medium", Arial, sans-serif 
 =anreg
 	font-family: "AvenirNext Regular", Arial, sans-serif 
 =andemi
 	font-family: "AvenirNext DemiBold", Arial, sans-serif
+=anbold
+	font-family: "AvenirNext Bold", Arial, sans-serif
 =icon
 	font-family: "untitled-font", Arial, sans-serif
 
@@ -84,6 +90,12 @@ h1, h2, h3, h4, h5, h6, strong, b
 	font-weight: normal
 a
 	text-decoration: none
+	
+h3
+	+anmed
+	font-size: 12px
+	+ttu
+	letter-spacing: 0.2em 	
 //mod
 .btn
 	+semi
@@ -139,6 +151,23 @@ a
 	padding: 5px 8px
 	display: inline-block 
 
+.btn-white
+	display: inline-block
+	width: 100%
+	max-width: 250px
+	background: #fff
+	+border-radius(2px)
+	+box-shadow(0 2px 1px 0 rgba(0, 0, 0, 0.2))
+	color: #00BEBB
+	+semi
+	font-size: 12px
+	+ttu
+	padding: 18px 20px 17px
+	+box  
+	letter-spacing: 0.2em 
+	position: relative
+	&:active
+		top: 1px
 .select
 	position: relative
 	cursor: pointer
