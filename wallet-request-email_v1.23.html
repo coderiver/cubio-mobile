@@ -11,32 +11,39 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<div class="popup-wrapper js-popup">
-	<div class="overlay"></div>
-	<div class="popup" id="pop-err">
-		<a href="#" class="popup__close js-popup-close"></a>
-		<i class="popup__icon icon-close"></i>
-		<p>Please enter a valid voucher code</p>
-	</div>
-</div>
 <!-- BEGIN  out-->
 <div class="out">
-	<div class="header">
+	<div class="header header_white">
+		<a href="#" class="header__close"></a>
 		<a href="#" class="header__back"></a>
-		<h3>Redeem Voucher</h3>
+		<p>
+			<span class="header__big">0.25</span>
+			<span class="header__small">6789</span>
+			<span class="header__med">btc</span>
+		</p>
 	</div>
 	<div class="form">
 		<form action="">
 			<div class="form__body">
 				<div class="form__field">
+					<span class="text-blue">Request via</span>
+					<div class="form-select js-form-choice">						
+						<input type="text" class="form-input js-form-input" value="Email">
+						<i></i>
+						<select name="" id="" class="js-form-select">
+							<option value="Email">Email</option>
+							<option value="QR Code">QR Code</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__field">
 					<label>
-						<span class="text-blue">Enter voucher code</span>
-						<input type="text" class="form-input" placeholder="ex.ICEUKE9XR39">
+						<span class="text-blue">Request from</span>
+						<input type="text" class="form-input" placeholder="Email Address">
 					</label>
 				</div>
-				<a href="#pop-err" class="js-popup-open">popup-error</a>
 			</div>
-			<button class="btn-submit">Confirm</button>
+			<button class="btn-submit">Request</button>
 		</form>
 	</div>
 </div>

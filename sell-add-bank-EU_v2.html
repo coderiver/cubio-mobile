@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out out_height">
+	<div class="header header_white header_bsn">
+		<a href="#" class="header__close"></a>
+		<h3>Add new bank</h3>
+	</div>
+	<ul class="tabs">
+		<li><a href="#tab1" class="is-active">European Bank</a></li>
+		<li><a href="#tab2">Rest of the World</a></li>
+	</ul>
+	<div class="tab-block" id="tab1">		
+		<div class="form form_mod form_pdn">
+			<form action="">
+				<div class="form__body">
+					<div class="form__field">
+						<label>
+							<span class="text-blue">Account Holder</span>
+							<input type="text" class="form-input" value="Sean Yao">
+						</label>
+					</div>
+					<div class="form__field">
+						<label>
+							<span class="text-blue">IBAN</span>
+							<input type="text" class="form-input form-input_up" placeholder="DE89 3704 0044 0532 0130 00">
+						</label>
+					</div>
+					<div class="form__field">
+						<label>
+							<span class="text-blue">BIC (Swift)</span>
+							<input type="text" class="form-input form-input_up" placeholder="DEUTDEBB000">
+						</label>
+					</div>
+				</div>	
+				<button class="btn-submit">Safe info</button>		
+			</form>
+		</div>
+	</div>
+	<div class="tab-block is-hidden" id="tab2">		
+		<div class="form form_mod form_pdn">
+			<form action="">
+				<div class="form__body">
+					<div class="form__field">
+						<label>
+							<span class="text-blue">Account Holder</span>
+							<input type="text" class="form-input" value="Sean Yao">
+						</label>
+					</div>
+					<div class="form__field">
+						<label>
+							<span class="text-blue">Bank Name</span>
+							<input type="text" class="form-input" placeholder="Your bank's name">
+						</label>
+					</div>
+					<div class="form__field">
+						<label>
+							<span class="text-blue">Account Number</span>
+							<input type="number" class="form-input" placeholder="Your account number">
+						</label>
+					</div>
+					<div class="form__field">
+						<label>
+							<span class="text-blue">Bank Address</span>
+							<input type="text" class="form-input" placeholder="Your bank's street address">
+						</label>
+					</div>
+					<div class="form__field">
+						<div class="form__row">
+							<div class="form__box form__box_mod">
+								<label>
+									<span>City</span>
+									<input type="text" class="form-input" placeholder="City">
+								</label>
+							</div>
+							<div class="form__box form__box_mod">
+								<label>
+									<span>Post Code</span>
+									<input type="number" class="form-input" placeholder="12345">
+								</label>
+							</div>
+						</div>
+					</div>						
+					<div class="form__field">
+						<span class="text-blue">Country</span>
+						<div class="form-select js-form-choice">						
+							<input type="text" class="form-input js-form-input" placeholder="Select your country">
+							<i class="is-right"></i>
+							<select name="" id="" class="js-form-select">
+								<option value=""></option>
+								<option value="Ua">Ua</option>
+								<option value="Uk">Uk</option>
+								<option value="Ru">Ru</option>
+								<option value="Eu">Eu</option>
+							</select>
+						</div>		
+					</div>
+				</div>	
+				<button class="btn-submit">Safe info</button>		
+			</form>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

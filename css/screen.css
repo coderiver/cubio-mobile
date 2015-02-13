@@ -20,10 +20,11 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.2; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.2; background: #f8fbfc; }
 
 @font-face { font-family: "ProximaNova Semibold"; src: url("fonts/proxima_nova-semibold.eot"); src: url("fonts/proxima_nova-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/proxima_nova-semibold.woff") format("woff"), url("fonts/proxima_nova-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "ProximaNova Regular"; src: url("fonts/ProximaNova-Regular.eot"); src: url("fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/ProximaNova-Regular.woff") format("woff"), url("fonts/ProximaNova-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "ProximaNova Bold"; src: url("fonts/ProximaNova-Bold.eot"); src: url("fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/ProximaNova-Bold.woff") format("woff"), url("fonts/ProximaNova-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "AvenirNext Medium"; src: url("fonts/AvenirNext-Medium.eot"); src: url("fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Medium.woff") format("woff"), url("fonts/AvenirNext-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "AvenirNext Regular"; src: url("fonts/AvenirNext-Regular.eot"); src: url("fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Regular.woff") format("woff"), url("fonts/AvenirNext-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "AvenirNext DemiBold"; src: url("fonts/AvenirNext-DemiBold.eot"); src: url("fonts/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-DemiBold.woff") format("woff"), url("fonts/AvenirNext-DemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -38,27 +39,31 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .btn { font-family: "ProximaNova Semibold", Arial, sans-serif; font-size: 12px; text-transform: uppercase; line-height: 1.2; color: #f7ce5e; border: 2px solid #f7ce5e; padding: 17px 20px 15px; width: 135px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; display: inline-block; -moz-border-radius: 2.6px; -webkit-border-radius: 2.6px; border-radius: 2.6px; background: rgba(255, 255, 255, 0.05); position: relative; letter-spacing: 0.2em; }
 .btn:active { top: 1px; }
 
-.form-input { width: 100%; padding: 7px 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #eaeaea; color: #353458; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 16px; letter-spacing: -0.059em; }
+.form-input { width: 100%; padding: 7px 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #eaeaea; color: #353458; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 16px; letter-spacing: -0.059em; background: none; }
 .form-input:-moz-placeholder, .form-input::-moz-placeholder { color: rgba(53, 52, 88, 0.3); opacity: 1; }
 .form-input::-webkit-input-placeholder { color: rgba(53, 52, 88, 0.3); }
 .form-input_center { text-align: center; }
+.form-input_up { text-transform: uppercase; }
+
+.form-select { position: relative; }
+.form-select input { position: relative; z-index: 3; }
+.form-select i { position: absolute; z-index: 4; top: 5px; right: 6px; background: url("../img/svg/arr-bot-dark.svg") no-repeat 0 0; -moz-background-size: 12px 8px; -o-background-size: 12px 8px; -webkit-background-size: 12px 8px; background-size: 12px 8px; width: 12px; height: 8px; display: inline-block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; }
+.form-select i.is-right { position: absolute; top: 3px; right: 8px; background: url("../img/svg/select-arr.svg") no-repeat 0 0; -moz-background-size: 8px 13px; -o-background-size: 8px 13px; -webkit-background-size: 8px 13px; background-size: 8px 13px; width: 8px; height: 13px; display: inline-block; content: ""; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.form-select select { width: 100%; height: 37px; position: absolute; top: 0; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; z-index: 5; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 16px; }
+
+.form-drop { position: relative; }
+.form-drop__inner { position: relative; }
+.form-drop__inner i { position: absolute; z-index: 4; top: 5px; right: 6px; background: url("../img/svg/arr-bot-dark.svg") no-repeat 0 0; -moz-background-size: 12px 8px; -o-background-size: 12px 8px; -webkit-background-size: 12px 8px; background-size: 12px 8px; width: 12px; height: 8px; display: inline-block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; }
+
+.form-btn-hide { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 10; }
 
 .btn-submit { width: 100%; padding: 18px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 12px; line-height: 1.2; letter-spacing: 0.2em; color: white; background: #00bebb; text-transform: uppercase; }
+.btn-submit.is-disable { background: #92c3d1; }
 
 .btn-blue { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; line-height: 1.2; color: #00bebb; border: 2px solid #00bebb; -moz-border-radius: 4.42px; -webkit-border-radius: 4.42px; border-radius: 4.42px; padding: 5px 8px; display: inline-block; }
 
 .btn-white { display: inline-block; width: 100%; max-width: 250px; background: white; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); color: #00bebb; font-family: "ProximaNova Semibold", Arial, sans-serif; font-size: 12px; text-transform: uppercase; padding: 18px 20px 17px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: 0.2em; position: relative; }
 .btn-white:active { top: 1px; }
-
-.select { position: relative; cursor: pointer; vertical-align: top; text-align: left; color: rgba(53, 52, 88, 0.3); font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 16px; letter-spacing: -0.059em; }
-
-.select__text { position: relative; display: block; width: 100%; padding: 7px 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #eaeaea; }
-.select__text.is-active { color: #353458; }
-.select__text.is-active:before { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-.select__text:before { position: absolute; top: 3px; right: 8px; background: url("../img/svg/select-arr.svg") no-repeat 0 0; -moz-background-size: 8px 13px; -o-background-size: 8px 13px; -webkit-background-size: 8px 13px; background-size: 8px 13px; width: 8px; height: 13px; display: inline-block; content: ""; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-
-.select__list { position: absolute; display: none; top: 100%; left: 0; right: 0; z-index: 100; border-left: 1px solid #eaeaea; border-right: 1px solid #eaeaea; }
-.select__list li { cursor: pointer; border-bottom: 1px solid #eaeaea; }
 
 .link { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; line-height: 1.2; color: #00bebb; }
 
@@ -182,34 +187,59 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.out { max-width: 600px; min-width: 320px; margin: 0 auto; position: relative; overflow: hidden; }
+.out { max-width: 600px; min-width: 320px; margin: 0 auto; position: relative; background: #f8fbfc; }
 .out_height { min-height: 100%; background-color: #f8fbfc; background: rgba(248, 251, 252, 0.95); }
 .out_scrn { height: 100%; }
+.out_foot { min-height: 100%; margin-bottom: -50px; }
+.out_foot:after { content: ""; display: block; height: 50px; }
 
-.home { background: #353458; text-align: center; padding: 190px 7px 115px; }
+.out_home { height: 100%; padding: 20px 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; font-size: 0; background: #353458; }
+.out_home:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
+.home { text-align: center; display: inline-block; vertical-align: middle; }
 
 .logo { display: inline-block; margin-bottom: 50px; }
 
 .btns { font-size: 0; }
 .btns .btn { margin: 0 7px 10px; }
 
+.form { padding-bottom: 20px; background: #f8fbfc; }
+.form_pdn { padding: 0; }
+.form_key { padding: 0; }
+.form__in { padding: 0 15px; }
 .form__body { position: relative; min-height: 200px; padding: 30px 0 0; }
-.form__field { padding: 0 15px 15px; *zoom: 1; }
+.form__field { padding: 0 15px 15px; position: relative; *zoom: 1; }
 .form__field:after { content: " "; display: table; clear: both; }
 .form__field .form-input { margin-bottom: 17px; }
 .form__field .link { float: right; margin: 0 12px 12px; }
 .form__field .select { margin-bottom: 17px; }
 .form__field_center { text-align: center; }
+.form__field i.icon_code { background: url('../img/icons-s2d47f4a251.png') 0 -30px no-repeat; width: 29px; height: 28px; display: block; margin: 0 auto 20px; }
+.form__img { font-size: 0; text-align: center; padding: 40px 0 14px; width: 292px; height: 292px; margin: 0 auto; }
+.form__img img { max-width: 100%; }
+.form__scan { width: 292px; height: 292px; margin: 40px auto 14px; text-align: center; font-size: 0; background: white; -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1); }
+.form__scan:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.form__scan img { width: 100%; height: 100%; display: inline-block; vertical-align: middle; }
+.form__scan a { display: inline-block; vertical-align: middle; }
+.form__scan a.is-camera { background: url("../img/svg/icon-camera.svg") no-repeat 0 0; -moz-background-size: 42px 38px; -o-background-size: 42px 38px; -webkit-background-size: 42px 38px; background-size: 42px 38px; width: 42px; height: 38px; display: inline-block; }
+.form__row { font-size: 0; margin: 0 -7px; }
+.form__box { display: inline-block; vertical-align: top; width: 50%; padding: 0 7px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.form__box span { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; color: #353458; font-family: "AvenirNext Bold", Arial, sans-serif; font-size: 12px; }
+.form__box label.is-active span { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; color: #00bebb; }
+.form__box_mod span { color: #00bebb; font-family: "AvenirNext Medium", Arial, sans-serif; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .inner { background: #353458; }
 
 .header { height: 55px; position: relative; text-align: center; font-size: 0; padding: 0 50px; background: #353458; -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
 .header:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.header_bsn { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 .header h3 { display: inline-block; vertical-align: middle; color: white; }
 .header .btn-menu { position: absolute; top: 50%; left: 16px; margin-top: -6px; }
 .header__address { background: url("../img/svg/address.svg") no-repeat 0 0; -moz-background-size: 22px 22px; -o-background-size: 22px 22px; -webkit-background-size: 22px 22px; background-size: 22px 22px; width: 22px; height: 22px; display: inline-block; position: absolute; top: 50%; right: 17px; margin-top: -11px; }
 .header__close { position: absolute; top: 50%; right: 10px; margin-top: -7px; background: url("../img/svg/close.svg") no-repeat 0 0; -moz-background-size: 14px 14px; -o-background-size: 14px 14px; -webkit-background-size: 14px 14px; background-size: 14px 14px; width: 14px; height: 14px; display: inline-block; }
+.header__close.is-dark { background: url("../img/svg/close-dark.svg") no-repeat 0 0; -moz-background-size: 14px 14px; -o-background-size: 14px 14px; -webkit-background-size: 14px 14px; background-size: 14px 14px; width: 14px; height: 14px; display: inline-block; }
 .header__back { position: absolute; top: 50%; left: 14px; margin-top: -8px; background: url("../img/svg/arr-back.svg") no-repeat 0 0; -moz-background-size: 16px 16px; -o-background-size: 16px 16px; -webkit-background-size: 16px 16px; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; }
+.header__back.is-dark { background: url("../img/svg/arr-back-dark.svg") no-repeat 0 0; -moz-background-size: 16px 16px; -o-background-size: 16px 16px; -webkit-background-size: 16px 16px; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; }
 .header .btn-blue { position: absolute; top: 50%; right: 14px; margin-top: -14px; }
 .header__center { text-align: center; display: inline-block; vertical-align: middle; }
 .header__center p { font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 21px; color: white; }
@@ -218,6 +248,19 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .header__tabs a { font-family: "ProximaNova Regular", Arial, sans-serif; color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; font-size: 11px; text-transform: uppercase; margin: 0 4px; }
 .header__tabs a.is-active { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; color: #f7ce5e; }
 .header__name { font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 15px; color: white; display: inline-block; vertical-align: middle; }
+.header_white { background: white; }
+.header_white h3 { color: #00bebb; }
+.header_white .header__close { background: url("../img/svg/close-dark.svg") no-repeat 0 0; -moz-background-size: 14px 14px; -o-background-size: 14px 14px; -webkit-background-size: 14px 14px; background-size: 14px 14px; width: 14px; height: 14px; display: inline-block; }
+.header_white .header__back { background: url("../img/svg/arr-back-dark.svg") no-repeat 0 0; -moz-background-size: 16px 16px; -o-background-size: 16px 16px; -webkit-background-size: 16px 16px; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; }
+.header_white p { text-align: center; color: #00bebb; display: inline-block; vertical-align: middle; }
+.header_white p span { display: inline-block; margin: 0 3px; }
+.header_white .btn-menu { border-color: #353458; }
+.header_white .btn-menu:before { background: #353458; }
+.header__big { font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 22px; }
+.header__med { font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 15px; text-transform: uppercase; }
+.header__med.is-dark { color: #353458; }
+.header__small { font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 15px; }
+.header .text-norm span { text-transform: none; }
 
 .btn-menu { display: block; width: 18px; border-top: 2px solid white; border-bottom: 2px solid white; height: 8px; position: relative; }
 .btn-menu:before { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: white; margin-top: -1px; }
@@ -246,7 +289,7 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .course__currency i { font-style: normal; font-family: "AvenirNext DemiBold", Arial, sans-serif; display: inline-block; width: 20px; text-align: left; }
 .course__am { float: right; width: 50%; text-align: right; font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 18px; color: #353458; }
 
-.footer { background: #353458; }
+.footer { background: #353458; width: 100%; max-width: 600px; margin: 0 auto; position: relative; z-index: 5; }
 .footer ul { font-size: 0; text-align: center; }
 .footer ul li { display: inline-block; vertical-align: top; width: 25%; text-align: center; padding: 5px 0; }
 .footer ul li a { font-size: 9px; color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; text-transform: uppercase; display: inline-block; }
@@ -262,7 +305,7 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .footer ul li a i.is-sell { background: url("../img/svg/icon-sell.svg") no-repeat 0 0; -moz-background-size: 28px 26px; -o-background-size: 28px 26px; -webkit-background-size: 28px 26px; background-size: 28px 26px; width: 28px; height: 26px; display: inline-block; }
 .footer__icon { height: 30px; text-align: center; }
 
-.content { background: white; padding: 20px 14px; }
+.content { background: #f8fbfc; padding: 20px 14px; }
 .content h3 { color: #353458; font-family: "AvenirNext DemiBold", Arial, sans-serif; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; text-align: center; margin-bottom: 15px; }
 .content h1, .content .title { display: block; font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 24px; color: #353458; text-align: center; }
 .content p { font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 15px; color: #353458; text-align: center; margin-bottom: 25px; }
@@ -284,12 +327,57 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 
 .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #e5edf1; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
 
-.popup { display: inline-block; vertical-align: middle; width: 100%; max-width: 300px; position: relative; background: white; padding: 35px 30px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
-.popup p { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 15px; color: #353458; text-align: left; }
-.popup__icon { font-size: 60px; color: #ec1847; margin-bottom: 10px; display: inline-block; }
+.popup { display: inline-block; vertical-align: middle; width: 100%; max-width: 300px; position: relative; background: white; padding: 35px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2); -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; display: none; }
+.popup.is-active { display: inline-block; }
+.popup p { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 15px; color: #353458; text-align: center; }
+.popup p span.is-blue { color: #00c6c3; }
+.popup .popup__blue { color: #00c6c3; margin-bottom: 15px; }
+.popup__icon { font-size: 60px; margin-bottom: 10px; display: inline-block; }
+.popup__icon.icon-close { color: #ec1847; }
+.popup__icon.icon-ok { color: #00c6c3; }
 .popup__close { background: url("../img/svg/close-dark.svg") no-repeat 0 0; -moz-background-size: 14px 14px; -o-background-size: 14px 14px; -webkit-background-size: 14px 14px; background-size: 14px 14px; width: 14px; height: 14px; display: inline-block; position: absolute; top: 15px; right: 15px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; }
+.popup__info span { font-family: "AvenirNext Medium", Arial, sans-serif; color: #353458; font-size: 15px; padding: 0 4px; display: inline-block; }
+.popup__info span.is-bold { font-family: "AvenirNext DemiBold", Arial, sans-serif; }
+.popup__info span.is-price { color: #00bebb; text-transform: uppercase; }
+.popup__text span { font-size: 18px; font-family: "AvenirNext DemiBold", Arial, sans-serif; }
+.popup__text span.is-small { font-size: 12px; font-family: "AvenirNext Regular", Arial, sans-serif; }
+.popup__text span.is-last { margin-left: 5px; }
 
-.currency { padding: 0 14px; background: white; }
+.d-down { position: absolute; top: 0; left: 0; right: 0; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.3s, visibility 0.3s; -o-transition: opacity 0.3s, visibility 0.3s; -webkit-transition: opacity 0.3s, visibility 0.3s; transition: opacity 0.3s, visibility 0.3s; z-index: 99; display: none; }
+.d-down__in { width: 100%; margin: 0 auto; border: 1px solid rgba(0, 0, 0, 0.15); background: white; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; overflow: hidden; }
+.d-down.is-active { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; display: block; }
+.d-down__title { background: #e5edf1; text-align: left; padding: 6px 14px; }
+.d-down__title p { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; color: #9da2a5; }
+.d-down li { border-bottom: 1px solid #e5edf1; padding: 0 14px; cursor: pointer; color: #353458; font-size: 0; text-align: center; height: 55px; text-align: center; font-size: 0; }
+.d-down li:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.d-down li:last-child { border-bottom: none; }
+.d-down li i { position: static; display: inline-block; vertical-align: middle; font-size: 90px; height: 34px; line-height: 34px; }
+.d-down li i:before { line-height: 34px; }
+.d-down li i.icon-cube_logo_dark { background: url("../img/svg/main-logo.svg") no-repeat 0 0; -moz-background-size: 24px 23px; -o-background-size: 24px 23px; -webkit-background-size: 24px 23px; background-size: 24px 23px; width: 24px; height: 23px; display: inline-block; }
+.d-down li i.icon-sofort { font-size: 140px; }
+.d-down li .d-down__item { display: inline-block; vertical-align: middle; }
+.d-down li .d-down__item span { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 13px; }
+.d-down li .d-down__item span.is-blue { color: #00bebb; margin-left: 5px; }
+.d-down li .d-down__item div { text-align: center; font-size: 0; }
+.d-down li .d-down__item div:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.d-down li .d-down__item div i, .d-down li .d-down__item div span { display: inline-block; vertical-align: middle; }
+.d-down li .d-down__item div i { margin-right: 10px; }
+.d-down li .d-down__item div .is-name { font-size: 12px; text-transform: uppercase; font-family: "ProximaNova Bold", Arial, sans-serif; letter-spacing: 0.2em; padding: 3px 0 0 0; }
+.d-down li .d-down__item .d-down__text { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; display: block; }
+.d-down .drop { background: white; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; overflow: hidden; }
+.d-down .drop li { text-align: left; display: block; padding: 15px 50px 14px 14px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: none; }
+.d-down .drop li span { font-size: 16px; font-family: "AvenirNext Regular", Arial, sans-serif; color: #353458; display: inline-block; vertical-align: middle; }
+.d-down .drop li.is-active .drop__icon { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.d-down .drop li.is-active .drop__icon i { color: #00bebb; }
+.d-down .drop li.is-active .drop__icon i.is-qr { background: url("../img/svg/icon-qr.svg") no-repeat 0 0; -moz-background-size: 22px 22px; -o-background-size: 22px 22px; -webkit-background-size: 22px 22px; background-size: 22px 22px; width: 22px; height: 22px; display: inline-block; }
+.d-down .drop li.is-active .drop__icon i.is-mail { background: url("../img/svg/icon-mail.svg") no-repeat 0 0; -moz-background-size: 24px 16px; -o-background-size: 24px 16px; -webkit-background-size: 24px 16px; background-size: 24px 16px; width: 24px; height: 16px; display: inline-block; }
+.d-down .drop__icon { position: absolute; top: 0; right: 0; bottom: 0; text-align: center; font-size: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15); opacity: 0.15; width: 48px; }
+.d-down .drop__icon:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.d-down .drop__icon i { display: inline-block; vertical-align: middle; font-size: 22px; color: #353458; height: 22px; }
+.d-down .drop__icon i.is-qr { background: url("../img/svg/icon-qr-dark.svg") no-repeat 0 0; -moz-background-size: 22px 22px; -o-background-size: 22px 22px; -webkit-background-size: 22px 22px; background-size: 22px 22px; width: 22px; height: 22px; display: inline-block; }
+.d-down .drop__icon i.is-mail { background: url("../img/svg/icon-mail-dark.svg") no-repeat 0 0; -moz-background-size: 24px 16px; -o-background-size: 24px 16px; -webkit-background-size: 24px 16px; background-size: 24px 16px; width: 24px; height: 16px; display: inline-block; }
+
+.currency { padding: 0 14px; background: #f8fbfc; }
 .currency a { display: block; position: relative; *zoom: 1; padding: 16px 0 16px 0; border-bottom: 1px solid #eaeaea; }
 .currency a:after { content: " "; display: table; clear: both; }
 .currency__country { float: left; width: 100%; max-width: 240px; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 14px; color: #353458; padding: 5px 0 0 0; }
@@ -314,7 +402,7 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .tab { width: 90px; display: block; padding: 4px 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #00bebb; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 12px; text-align: center; }
 .tab.is-active { color: white; background: #00bebb; }
 
-.box-wrapper { padding: 0 14px 70px; }
+.box-wrapper { padding: 0 14px 20px; }
 
 .box { padding: 0 0 0 40px; position: relative; }
 .box__img { position: absolute; top: 0; left: 0; bottom: 0; text-align: center; font-size: 0; }
@@ -362,10 +450,52 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .activity__title { color: #353458; *zoom: 1; }
 .activity__title:after { content: " "; display: table; clear: both; }
 .activity__title i { font-size: 24px; float: left; margin-right: 10px; }
-.activity__title p { padding: 6px 0 0 0; overflow: hidden; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 13px; }
+.activity__title p { padding: 6px 0 0 0; overflow: hidden; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 13px; letter-spacing: -0.05em; }
 .activity__list { color: #353458; }
 .activity__list li { *zoom: 1; border-bottom: 1px solid #eaeaea; padding: 25px 0 10px; }
 .activity__list li:after { content: " "; display: table; clear: both; }
-.activity__status { color: #00bebb; font-size: 11px; font-family: "AvenirNext Bold", Arial, sans-serif; }
+.activity__status { color: #00bebb; font-size: 11px; font-family: "AvenirNext Bold", Arial, sans-serif; display: block; overflow: hidden; text-align: right; padding: 4px 0 0 0; }
 .activity__left { float: left; font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 12px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; padding: 2px 0 0 0; }
 .activity__right { font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 16px; display: block; overflow: hidden; text-align: right; }
+
+.request { text-align: center; }
+.request h1 { font-size: 28px; font-family: "AvenirNext Medium", Arial, sans-serif; color: #4b4d66; text-transform: uppercase; }
+.request h1 span { color: #00bebb; font-family: "AvenirNext DemiBold", Arial, sans-serif; margin-right: 5px; }
+.request p { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; font-family: "AvenirNext Regular", Arial, sans-serif; font-size: 18px; color: #353458; padding: 5px 0; }
+.request p span { margin-left: 5px; }
+.request__info { height: 200px; text-align: center; font-size: 0; padding: 0 22px; }
+.request__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.request__center { display: inline-block; vertical-align: middle; position: relative; padding: 0 15px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.request .arrows { position: absolute; top: 50%; right: 0; margin-top: -9px; background: url("../img/svg/arrows.svg") no-repeat 0 0; -moz-background-size: 14px 18px; -o-background-size: 14px 18px; -webkit-background-size: 14px 18px; background-size: 14px 18px; width: 14px; height: 18px; display: inline-block; }
+
+.keyboard { *zoom: 1; border-top: 1px solid #e5edf1; }
+.keyboard:after { content: " "; display: table; clear: both; }
+.keyboard__btns { font-size: 0; position: relative; }
+.keyboard__btns:before { content: ""; position: absolute; top: 0; left: 50%; bottom: 0; width: 1px; background: #00e5e1; }
+.keyboard__btns .btn-submit { width: 50%; display: inline-block; vertical-align: top; }
+.keyboard ul { font-size: 0; }
+.keyboard ul li { display: inline-block; width: 33.3%; }
+.keyboard ul li .key { height: 55px; display: block; text-align: center; font-size: 0; background: white; }
+.keyboard ul li .key:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.keyboard ul li .key span { display: inline-block; vertical-align: middle; font-size: 25px; color: #00bebb; font-family: "AvenirNext Regular", Arial, sans-serif; }
+.keyboard ul li .key i.is-back { background: url("../img/svg/key-back.svg") no-repeat 0 0; -moz-background-size: 24px 18px; -o-background-size: 24px 18px; -webkit-background-size: 24px 18px; background-size: 24px 18px; width: 24px; height: 18px; display: inline-block; }
+.keyboard ul li .key_mod { color: black; display: block; text-align: center; font-size: 0; height: 55px; border-bottom: 1px solid #bfc2c7; position: relative; }
+.keyboard ul li .key_mod:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.keyboard ul li .key_mod:after { content: ""; position: absolute; top: 0; bottom: 0; left: -1px; background: #bfc2c7; width: 1px; }
+.keyboard ul li .key_mod span { display: block; text-align: center; }
+.keyboard ul li .key_mod i.is-back-black { background: url("../img/svg/key-back-black.svg") no-repeat 0 0; -moz-background-size: 24px 18px; -o-background-size: 24px 18px; -webkit-background-size: 24px 18px; background-size: 24px 18px; width: 24px; height: 18px; display: inline-block; }
+.keyboard ul li .key_mod__in { display: inline-block; vertical-align: middle; }
+.keyboard ul li .key_col { background: #bfc2c7; }
+.keyboard ul li .key__number { font-size: 28px; }
+.keyboard ul li .key__letter { font-size: 12px; font-family: Helvetica; text-transform: uppercase; height: 14px; letter-spacing: 0.2em; }
+.keyboard_mod { overflow: hidden; border-top: none; }
+
+.tabs { font-size: 0; padding: 0 15px; background: white; border-bottom: 1px solid #eaeaea; }
+.tabs li { display: inline-block; vertical-align: top; width: 50%; }
+.tabs li a { display: block; color: #353458; font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 12px; text-align: center; position: relative; padding: 17px 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+.tabs li a:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: #00bebb; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; visibility: hidden; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.tabs li a.is-active { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.tabs li a.is-active:before { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
+
+.tab-block { display: block; }
+.tab-block.is-hidden { display: none; }

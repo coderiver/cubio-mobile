@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- BEGIN  out-->
-<div class="out">
+<div class="out out_height">
 	<div class="header">
 		<a href="#" class="btn-blue">Start</a>
 		<h3>Welcome</h3>
@@ -35,14 +35,16 @@
 				</div>
 				<div class="form__field">
 					<span class="text-blue">Your preferred currency?</span>
-					<div class="select js-select">
-						<span class="select__text js-select-text">choose a currency</span>
-						<input type="hidden" class="js-select-input" value="0">
-						<ul class="select__list js-select-list">
-							<li data-id="1">usd</li>
-							<li data-id="2">eur</li>
-						</ul>
-					</div>			
+					<div class="form-select js-form-choice">						
+						<input type="text" class="form-input js-form-input" placeholder="choose a currency">
+						<i class="is-right"></i>
+						<select name="" id="" class="js-form-select">
+							<option value=""></option>
+							<option value="btc">btc</option>
+							<option value="usd">usd</option>
+							<option value="eur">eur</option>
+						</select>
+					</div>		
 				</div>
 			</div>
 		</form>

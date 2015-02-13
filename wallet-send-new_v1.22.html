@@ -11,32 +11,31 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<div class="popup-wrapper js-popup">
-	<div class="overlay"></div>
-	<div class="popup" id="pop-err">
-		<a href="#" class="popup__close js-popup-close"></a>
-		<i class="popup__icon icon-close"></i>
-		<p>Please enter a valid voucher code</p>
-	</div>
-</div>
 <!-- BEGIN  out-->
-<div class="out">
-	<div class="header">
-		<a href="#" class="header__back"></a>
-		<h3>Redeem Voucher</h3>
+<div class="out out_height">
+	<div class="header header_white">
+		<a href="#" class="header__close is-dark"></a>
+		<a href="#" class="header__back is-dark"></a>
+		<p>
+			<span class="header__big">0.25</span>
+			<span class="header__small">6789</span>
+			<span class="header__med is-dark">btc</span>
+		</p>
 	</div>
-	<div class="form">
+	<div class="form form_mod form_pdn">
 		<form action="">
 			<div class="form__body">
 				<div class="form__field">
 					<label>
-						<span class="text-blue">Enter voucher code</span>
-						<input type="text" class="form-input" placeholder="ex.ICEUKE9XR39">
+						<span class="text-blue">To</span>
+						<input type="text" class="form-input" placeholder="Scan or enter bitcoin address">
 					</label>
+				</div>			
+				<div class="form__img">
+					<img src="img/scan.jpg" alt="">
 				</div>
-				<a href="#pop-err" class="js-popup-open">popup-error</a>
-			</div>
-			<button class="btn-submit">Confirm</button>
+			</div>	
+			<button class="btn-submit">send</button>		
 		</form>
 	</div>
 </div>

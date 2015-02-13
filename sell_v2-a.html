@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- begin menu  -->
+<div class="menu js-menu">
+	<div class="menu__inner">
+		<div class="header">
+			<a href="#" class="nav-close js-menu-close"></a>
+			<span class="header__name">Sean Yao</span>
+		</div>
+		<ul class="nav">
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-settings"></i></div>
+					<span>Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-help"></i></div>
+					<span>Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-logout"></i></div>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+		<div class="menu__footer">
+			<span class="menu__text">buy price</span>
+			<span class="menu__price">&#8364; 181.44</span>
+		</div>
+	</div>
+</div>
+<!-- end menu -->
+<!-- BEGIN  out-->
+<div class="out out_height out_foot">
+	<div class="header header_white">
+		<a href="#" class="btn-menu js-menu-btn"></a>
+		<p class="text-norm">
+			<span class="header__med">Sell Price:</span>
+			<span class="header__med">&#8364;158.52</span>
+		</p>
+	</div>
+	<div class="form form_mod">
+		<form action="">
+			<div class="form__body">
+				<div class="form__field">
+					<div class="form__row">
+						<div class="form__box js-form-box">
+							<label>
+								<span>EUR</span>
+								<input type="text" class="form-input" placeholder="0.00">
+							</label>
+						</div>
+						<div class="form__box js-form-box">
+							<label>
+								<span>BTC</span>
+								<input type="text" class="form-input" placeholder="~ 0.00">
+							</label>
+						</div>
+					</div>
+				</div>				
+				<div class="form__field">
+					<div class="form-drop js-drop-choice">
+						<span class="text-blue">Cash out to</span>	
+						<div class="form-drop__inner">
+							<input type="text" class="form-input js-drop-input" placeholder="Select cash out method">
+							<i></i>
+						</div>						
+						<a href="#" class="form-btn-hide js-drop-btn"></a>
+						<div class="d-down js-drop-items">
+							<div class="d-down__in">
+								<ul>
+									<li data-value="Cash Account">
+										<div class="d-down__item">											
+											<div>
+												<i class="icon-cube_logo_dark"></i>
+												<span class="is-name">Cash account</span>
+											</div>
+										</div>	
+									</li>
+									<li data-value="Add New Bank">
+										<div class="d-down__item">											
+											<div>
+												<span class="is-name">Add new bank</span>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="form__field">
+					<label>
+						<span class="text-blue">Payment fee</span>
+						<input type="text" class="form-input" placeholder="0.00">
+					</label>
+				</div>	
+			</div>	
+			<button class="btn-submit is-disable">sell</button>	
+		</form>
+	</div>
+</div>
+<!-- END out-->
+
+<div class="footer">
+	<ul>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-wallet"></i></div>
+				<span>wallet</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-activity"></i></div>
+				<span>activity</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-buy"></i></div>
+				<span>buy</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="is-active">
+				<div class="footer__icon"><i class="is-sell"></i></div>
+				<span>sell</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

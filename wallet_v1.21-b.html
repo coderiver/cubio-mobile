@@ -11,11 +11,45 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<!-- BEGIN  out-->
-<div class="out">
-	<div class="inner">
+<!-- begin menu  -->
+<div class="menu js-menu">
+	<div class="menu__inner">
 		<div class="header">
-			<a href="#" class="btn-menu"></a>
+			<a href="#" class="nav-close js-menu-close"></a>
+			<span class="header__name">Sean Yao</span>
+		</div>
+		<ul class="nav">
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-settings"></i></div>
+					<span>Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-help"></i></div>
+					<span>Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="nav__icon"><i class="icon-logout"></i></div>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+		<div class="menu__footer">
+			<span class="menu__text">buy price</span>
+			<span class="menu__price">&#8364; 181.44</span>
+		</div>
+	</div>
+</div>
+<!-- end menu -->
+<!-- BEGIN  out-->
+<div class="out out_foot">
+	<div class="inner">
+		<div class="header header_bsn">
+			<a href="#" class="btn-menu js-menu-btn"></a>
 			<a href="#" class="header__address"></a>
 		</div>
 		<div class="wallet">
@@ -52,37 +86,37 @@
 				</div>				
 			</div>
 		</div>
-		<div class="footer">
-			<ul>
-				<li>
-					<a href="#" class="is-active">
-						<div class="footer__icon"><i class="is-wallet"></i></div>
-						<span>wallet</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div class="footer__icon"><i class="is-activity"></i></div>
-						<span>activity</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div class="footer__icon"><i class="is-buy"></i></div>
-						<span>buy</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div class="footer__icon"><i class="is-sell"></i></div>
-						<span>sell</span>
-					</a>
-				</li>
-			</ul>
-		</div>
 	</div>
 </div>
 <!-- END out-->
+<div class="footer">
+	<ul>
+		<li>
+			<a href="#" class="is-active">
+				<div class="footer__icon"><i class="is-wallet"></i></div>
+				<span>wallet</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-activity"></i></div>
+				<span>activity</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-buy"></i></div>
+				<span>buy</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="footer__icon"><i class="is-sell"></i></div>
+				<span>sell</span>
+			</a>
+		</li>
+	</ul>
+</div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

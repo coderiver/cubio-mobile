@@ -3,18 +3,31 @@
 	min-width: 320px
 	margin: 0 auto 
 	position: relative
-	overflow: hidden
+	background: #F8FBFC 
 	&_height
 		min-height: 100% 
 		background-color: #F8FBFC 
 		background: rgba(248, 251, 252, 0.95) 
 	&_scrn
 		height: 100%
+	&_foot
+		min-height: 100%
+		margin-bottom: -50px
+		&:after
+			content: "" 
+			display: block
+			height: 50px
+.out_home
+	height: 100%
+	padding: 20px 0
+	+box
+	+vertical 
+	background: #353458 
 //home
 .home
-	background: #353458 
 	text-align: center
-	padding: 190px 7px 115px 
+	display: inline-block
+	vertical-align: middle
 .logo
 	display: inline-block
 	margin-bottom: 50px
@@ -25,12 +38,21 @@
 
 //form
 .form
+	padding-bottom: 20px
+	background: #F8FBFC 
+	&_pdn
+		padding: 0
+	&_key
+		padding: 0
+	&__in
+		padding: 0 15px 
 	&__body
 		position: relative
 		min-height: 200px
 		padding: 30px 0 0  
 	&__field
 		padding: 0 15px 15px
+		position: relative
 		+clr
 		.form-input
 			margin-bottom: 17px
@@ -41,8 +63,64 @@
 			margin-bottom: 17px
 		&_center
 			text-align: center
-
-
+		i
+			&.icon_code
+				+s(icon-code)
+				display: block
+				margin: 0 auto 20px
+	&_mod
+		.form-input
+			// background: rgba(248, 251, 252, 0.95) 
+	&__img
+		font-size: 0
+		text-align: center
+		padding: 40px 0 14px 
+		width: 292px
+		height: 292px
+		margin: 0 auto
+		img
+			max-width: 100%
+	&__scan
+		width: 292px
+		height: 292px
+		margin: 40px auto 14px
+		+vertical
+		background: #fff
+		+box-shadow(0 2px 2px 1px rgba(0, 0, 0, 0.1)) 
+		img
+			width: 100%
+			height: 100%
+			display: inline-block
+			vertical-align: middle
+		a
+			display: inline-block
+			vertical-align: middle
+			&.is-camera
+				+svg(icon-camera, 42, 38)
+	&__row
+		font-size: 0
+		margin: 0 -7px 
+	&__box
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 0 7px 
+		+box
+		span
+			+opacity(0.5)
+			color: #353458 
+			+anbold
+			font-size: 12px
+		label
+			&.is-active
+				span
+					+opacity(1)
+					color: #00BEBB 
+		&_mod
+			span
+				color: #00BEBB 
+				+anmed
+				+opacity(1)
 //inner
 .inner
 	background: #353458
@@ -53,6 +131,8 @@
 	padding: 0 50px 
 	background: #353458
 	+box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.2))
+	&_bsn
+		+box-shadow(none)
 	h3
 		display: inline-block
 		vertical-align: middle
@@ -74,12 +154,16 @@
 		right: 10px
 		margin-top: -7px
 		+svg(close, 14, 14)
+		&.is-dark
+			+svg(close-dark, 14, 14)
 	&__back
 		position: absolute
 		top: 50%
 		left: 14px
 		margin-top: -8px
 		+svg(arr-back, 16, 16)
+		&.is-dark
+			+svg(arr-back-dark, 16, 16)
 	.btn-blue
 		position: absolute
 		top: 50%
@@ -114,6 +198,41 @@
 		color: #fff
 		display: inline-block
 		vertical-align: middle 
+	&_white
+		background: #fff 
+		h3
+			color: #00BEBB 
+		.header__close
+			+svg(close-dark, 14, 14)
+		.header__back
+			+svg(arr-back-dark, 16, 16)
+		p
+			text-align: center
+			color: #00BEBB 
+			display: inline-block
+			vertical-align: middle
+			span
+				display: inline-block
+				margin: 0 3px 
+		.btn-menu
+			border-color: #353458 
+			&:before
+				background: #353458 
+	&__big
+		+anreg
+		font-size: 22px
+	&__med
+		+andemi
+		font-size: 15px
+		+ttu
+		&.is-dark
+			color: #353458
+	&__small
+		+anreg
+		font-size: 15px
+	.text-norm
+		span
+			text-transform: none
 .btn-menu
 	display: block
 	width: 18px
@@ -220,6 +339,11 @@
 
 .footer
 	background: #353458
+	width: 100%
+	max-width: 600px
+	margin: 0 auto
+	position: relative
+	z-index: 5 
 	ul
 		font-size: 0
 		text-align: center
@@ -266,7 +390,7 @@
 
 //content
 .content
-	background: #fff
+	background: #F8FBFC
 	padding: 20px 14px 
 	h3
 		color: #353458
@@ -360,30 +484,187 @@
 	max-width: 300px
 	position: relative
 	background: #fff 
-	padding: 35px 30px
+	padding: 35px 15px
 	+box
 	+box-shadow(0 2px 1px 0 rgba(0, 0, 0, 0.2))
 	+border-radius(4px)
+	display: none
+	&.is-active
+		display: inline-block
 	p
 		+anmed
 		font-size: 15px
 		color: #353458
-		text-align: left
+		text-align: center
+		span
+			&.is-blue
+				color: #00c6c3 
+	.popup__blue
+		color: #00c6c3 
+		margin-bottom: 15px
 	&__icon
 		font-size: 60px
-		color: #EC1847 
 		margin-bottom: 10px
-		display: inline-block 
+		display: inline-block
+		&.icon-close
+			color: #EC1847 
+		&.icon-ok
+			color: #00C6C3 
 	&__close
 		+svg(close-dark, 14, 14)
 		position: absolute
 		top: 15px
 		right: 15px
 		+opacity(0.4)
-	
+	&__info
+		span
+			+anmed
+			color: #353458 
+			font-size: 15px
+			padding: 0 4px 
+			display: inline-block
+			&.is-bold
+				+andemi
+			&.is-price
+				color: #00BEBB 
+				+ttu
+	&__text
+		span
+			font-size: 18px
+			+andemi
+			&.is-small
+				font-size: 12px
+				+anreg
+			&.is-last
+				margin-left: 5px
+				
+.d-down
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	visibility: hidden
+	+opacity(0)
+	+transition(opacity 0.3s, visibility 0.3s)
+	z-index: 99 
+	display: none
+	&__in
+		width: 100%
+		// max-width: 292px
+		margin: 0 auto 
+		border: 1px solid rgba(0, 0, 0, 0.15)
+		background: #fff
+		+border-radius(3px)
+		overflow: hidden
+	&.is-active
+		visibility: visible
+		+opacity(1)
+		display: block
+	&__title
+		background: #E5EDF1
+		text-align: left
+		padding: 6px 14px 
+		p
+			+anmed
+			font-size: 12px
+			color: #9DA2A5 
+	li
+		border-bottom: 1px solid #E5EDF1
+		padding: 0 14px
+		cursor: pointer
+		color: #353458
+		font-size: 0
+		text-align: center
+		height: 55px
+		+vertical
+		&:last-child
+			border-bottom: none
+		i
+			position: static
+			display: inline-block
+			vertical-align: middle
+			font-size: 90px
+			height: 34px
+			line-height: 34px 
+			&:before
+				line-height: 34px
+			&.icon-cube_logo_dark
+				+svg(main-logo, 24, 23)
+			&.icon-sofort
+				font-size: 140px
+		.d-down__item
+			display: inline-block
+			vertical-align: middle
+			span
+				+anmed
+				font-size: 13px
+				&.is-blue
+					color: #00BEBB 
+					margin-left: 5px
+			div	
+				+vertical
+				i, span
+					display: inline-block
+					vertical-align: middle
+				i
+					margin-right: 10px			
+				.is-name
+					font-size: 12px
+					+ttu
+					+bold
+					letter-spacing: 0.2em 
+					padding: 3px 0 0 0 
+			.d-down__text
+				+anmed
+				font-size: 12px
+				display: block
+	.drop
+		background: #fff
+		+border-radius(3px)
+		overflow: hidden 
+		li
+			text-align: left
+			display: block
+			padding: 15px 50px 14px 14px
+			position: relative
+			+box
+			border: none
+			span
+				font-size: 16px
+				+anreg
+				color: #353458 
+				display: inline-block
+				vertical-align: middle
+			&.is-active
+				.drop__icon
+					+opacity(1)
+					i
+						color: #00BEBB 
+						&.is-qr
+							+svg(icon-qr, 22, 22)
+						&.is-mail
+							+svg(icon-mail, 24, 16)
+		&__icon
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			+vertical
+			+opacity(0.15)
+			width: 48px
+			i
+				display: inline-block
+				vertical-align: middle
+				font-size: 22px
+				color: #353458 
+				height: 22px
+				&.is-qr
+					+svg(icon-qr-dark, 22, 22)
+				&.is-mail
+					+svg(icon-mail-dark, 24, 16)
 .currency
 	padding: 0 14px
-	background: #fff  
+	background: #F8FBFC  
 	a
 		display: block
 		position: relative
@@ -482,7 +763,7 @@
 
 //box
 .box-wrapper
-	padding: 0 14px 70px 
+	padding: 0 14px 20px 
 .box
 	padding: 0 0 0 40px
 	position: relative
@@ -649,6 +930,7 @@
 			overflow: hidden
 			+anreg
 			font-size: 13px
+			letter-spacing: -0.05em 
 	&__list
 		color: #353458 
 		li
@@ -659,6 +941,10 @@
 		color: #00BEBB
 		font-size: 11px 
 		+anbold
+		display: block
+		overflow: hidden
+		text-align: right
+		padding: 4px 0 0 0 
 	&__left
 		float: left
 		+andemi
@@ -672,26 +958,168 @@
 		overflow: hidden
 		text-align: right
 
+//request
+.request
+	text-align: center 
+	h1
+		font-size: 28px
+		+anmed
+		color: #4B4D66
+		+ttu 
+		span
+			color: #00BEBB 
+			+andemi
+			margin-right: 5px
+	p
+		+opacity(0.4)
+		+anreg
+		font-size: 18px
+		color: #353458
+		padding: 5px 0 
+		span
+			margin-left: 5px
+	&__info
+		height: 200px
+		+vertical
+		padding: 0 22px 
+	&__center
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		padding: 0 15px
+		width: 100%
+		+box 
+	.arrows
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -9px
+		+svg(arrows, 14, 18)
 
 
 
 
 
+//KEYBOARD
+.keyboard
+	+clr
+	border-top: 1px solid #E5EDF1 
+	&__btns
+		font-size: 0
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 50%
+			bottom: 0
+			width: 1px
+			background: #00E5E1 
+		.btn-submit
+			width: 50%
+			display: inline-block
+			vertical-align: top
+	ul
+		font-size: 0
+		li
+			display: inline-block
+			width: 33.3%
+			.key
+				height: 55px
+				display: block
+				+vertical
+				background: #fff 
+				span
+					display: inline-block
+					vertical-align: middle
+					font-size: 25px
+					color: #00BEBB
+					+anreg 
+				i
+					&.is-back
+						+svg(key-back, 24, 18)
+			.key_mod
+				color: #000 
+				display: block
+				+vertical
+				height: 55px
+				border-bottom: 1px solid #BFC2C7 
+				position: relative
+				&:after
+					content: "" 
+					position: absolute
+					top: 0
+					bottom: 0
+					left: -1px
+					background: #BFC2C7 
+					width: 1px
+				span
+					display: block
+					text-align: center
+				i
+					&.is-back-black
+						+svg(key-back-black, 24, 18)
+				&__in
+					display: inline-block
+					vertical-align: middle
+			.key_col
+				background: #BFC2C7 
+			.key__number
+				font-size: 28px
+			.key__letter
+				font-size: 12px
+				font-family: Helvetica 
+				+ttu
+				height: 14px
+				letter-spacing: 0.2em 
+	&_mod
+		overflow: hidden
+		border-top: none
 
 
 
+//tabs
+.tabs
+	font-size: 0
+	padding: 0 15px
+	background: #fff 
+	border-bottom: 1px solid #eaeaea
+	li
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		a
+			display: block
+			color: #353458
+			+andemi
+			font-size: 12px
+			text-align: center
+			position: relative
+			padding: 17px 0 
+			+opacity(0.4)
+			+transition(opacity 0.3s)
+			&:before
+				content: "" 
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 3px
+				background: #00BEBB 
+				+opacity(0)
+				visibility: hidden
+				+transition(all 0.3s)
+			&.is-active
+				+opacity(1)
+				&:before
+					+opacity(1)
+					visibility: visible
 
 
-
-
-
-
-
-
-
-
-
-
+.tab-block
+	display: block
+	&.is-hidden
+		display: none
 
 
 
