@@ -293,7 +293,7 @@ h3 { font-family: "AvenirNext Medium", Arial, sans-serif; font-size: 12px; text-
 .course .course__currency i { font-style: normal; font-family: "AvenirNext DemiBold", Arial, sans-serif; display: inline-block; width: 20px; text-align: left; }
 .course .course__am { float: right; width: 50%; text-align: right; font-family: "AvenirNext DemiBold", Arial, sans-serif; font-size: 18px; color: #353458; }
 
-.footer { background: #353458; width: 100%; max-width: 600px; margin: 0 auto; position: relative; z-index: 5; position: fixed; bottom: 0; left: 0; width: 100%; }
+.footer { background: #353458; width: 100%; max-width: 600px; margin: 0 auto; position: relative; z-index: 5; position: fixed; bottom: 0; left: 0; width: 100%; right: 0; }
 .footer ul { font-size: 0; text-align: center; }
 .footer ul li { display: inline-block; vertical-align: top; width: 25%; text-align: center; padding: 5px 0; }
 .footer ul li a { font-size: 9px; color: white; opacity: 0.4; text-transform: uppercase; display: inline-block; }
